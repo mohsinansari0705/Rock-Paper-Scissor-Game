@@ -44,3 +44,33 @@ else:
         print("You Lose!")
     else:
         print("Error 404!")
+
+## Optimized Approach
+
+We can optimize the code by using the difference between `your_ch` and `computer`:
+
+- `your_ch (Rock=1) - computer (Rock=1) = 0` (Tie)
+- `your_ch (Paper=2) - computer (Rock=1) = 1` (Win)
+- `your_ch (Scissor=3) - computer (Rock=1) = 2` (Lose)
+
+- `your_ch (Rock=1) - computer (Paper=2) = -1` (Lose)
+- `your_ch (Paper=2) - computer (Paper=2) = 0` (Tie)
+- `your_ch (Scissor=3) - computer (Paper=2) = 1` (Win)
+
+- `your_ch (Rock=1) - computer (Scissor=3) = -2` (Win)
+- `your_ch (Paper=2) - computer (Scissor=3) = -1` (Lose)
+- `your_ch (Scissor=3) - computer (Scissor=3) = 0` (Tie)
+
+### Conclusion
+
+- If `(your_ch - computer) == 0` or `(computer == your_ch)`: Tie
+- If `(your_ch - computer) == 1` or `-2`: You Win
+- If `(your_ch - computer) == -1` or `2`: You Lose
+
+### Code
+
+```python
+if (your_ch - computer) == 1 or (your_ch - computer) == -2:
+    print("You Win.")
+else:
+    print("You Lose!")
