@@ -26,7 +26,6 @@ The game logic is as follows:
 
 ### Code
 
-```python
 if computer == your_ch:
     print("It's a Tie.")
 else:
