@@ -26,7 +26,7 @@ The game logic is as follows:
 
 ### Code
 
-```python
+\`\`\`python
 if computer == your_ch:
     print("It's a Tie.")
 else:
@@ -43,7 +43,7 @@ else:
     elif computer == 3 and your_ch == 2:
         print("You Lose!")
     else:
-        print("Error 404!")
+        print("Error 404!")\`\`\`
 
 ## Optimized Approach
 
