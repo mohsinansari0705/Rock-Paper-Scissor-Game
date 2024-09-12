@@ -24,6 +24,28 @@ The game logic is as follows:
     - `your_ch == 1` (Rock) --> You Win
     - `your_ch == 2` (Paper) --> You Lose
 
+### Code
+
+```python
+if computer == your_ch:
+    print("It's a Tie.")
+else:
+    if computer == 1 and your_ch == 2:
+        print("You Win.")
+    elif computer == 1 and your_ch == 3:
+        print("You Lose!")
+    elif computer == 2 and your_ch == 1:
+        print("You Lose!")
+    elif computer == 2 and your_ch == 3:
+        print("You Win.")
+    elif computer == 3 and your_ch == 1:
+        print("You Win.")
+    elif computer == 3 and your_ch == 2:
+        print("You Lose!")
+    else:
+        print("Error 404!")
+```
+
 ## Optimized Approach
 
 We can optimize the code by using the difference between `your_ch` and `computer`:
@@ -46,23 +68,14 @@ We can optimize the code by using the difference between `your_ch` and `computer
 - If `(your_ch - computer) == 1` or `-2`: You Win
 - If `(your_ch - computer) == -1` or `2`: You Lose
 
-### Code : Brute Force Approach
+### Code
 
 ```python
-if computer == your_ch:
+if(computer == your_ch):
     print("It's a Tie.")
 else:
-    if computer == 1 and your_ch == 2:
+    if((your_ch-computer) == 1 or (your_ch-computer) == -2):
         print("You Win.")
-    elif computer == 1 and your_ch == 3:
-        print("You Lose!")
-    elif computer == 2 and your_ch == 1:
-        print("You Lose!")
-    elif computer == 2 and your_ch == 3:
-        print("You Win.")
-    elif computer == 3 and your_ch == 1:
-        print("You Win.")
-    elif computer == 3 and your_ch == 2:
-        print("You Lose!")
     else:
-        print("Error 404!")
+        print("You Lose!")
+```
